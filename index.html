@@ -9,25 +9,70 @@
 <body>
 
     <div class="container">
-        <label for="ciudad">Selecciona una ciudad de Colombia:</label>
-        <select id="ciudad" name="ciudad">
-            <option value="bogota">Bogotá</option>
-            <option value="medellin">Medellín</option>
-            <option value="cali">Cali</option>
-            <option value="barranquilla">Barranquilla</option>
-            <option value="cartagena">Cartagena</option>
-            <option value="bucaramanga">Bucaramanga</option>
-            <option value="manizales">Manizales</option>
-            <option value="pereira">Pereira</option>
-            <option value="santa_marta">Santa Marta</option>
-            <option value="ibague">Ibagué</option>
-        </select>
+
+        <div>
+            <form class="container-form">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input class="container-input" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                    
+                </div>
+                
+                <div>
+                    <label for="fecha">Fecha:</label>
+                    <input class="container-input" type="date" id="fecha" name="fecha">
+                </div>
+            </form>
+        </div>
+
+        <div class="select">
+            <label for="municipio">Selecciona un municipio del Departamento del Huila:</label>
+            <select id="municipio" name="municipio">
+                <option value="" disabled selected>Elige una opción</option>
+                <option value="Aipe">Aipe</option>
+                <option value="Algeciras">Algeciras</option>
+                <option value="Altamira">Altamira</option>
+                <option value="Baraya">Baraya</option>
+                <option value="Campoalegre">Campoalegre</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Elías">Elías</option>
+                <option value="El Agrado">El Agrado</option>
+                <option value="Garzón">Garzón</option>
+                <option value="Gigante">Gigante</option>
+                <option value="Guadalupe">Guadalupe</option>
+                <option value="Hobo">Hobo</option>
+                <option value="Íquira">Íquira</option>
+                <option value="Isnos">Isnos</option>
+                <option value="La Argentina">La Argentina</option>
+                <option value="La Plata">La Plata</option>
+                <option value="Nátaga">Nátaga</option>
+                <option value="Neiva">Neiva</option>
+                <option value="Oporapa">Oporapa</option>
+                <option value="Paicol">Paicol</option>
+                <option value="Palermo">Palermo</option>
+                <option value="Palestina">Palestina</option>
+                <option value="Pital">Pital</option>
+                <option value="Pitalito">Pitalito</option>
+                <option value="Rivera">Rivera</option>
+                <option value="Saladoblanco">Saladoblanco</option>
+                <option value="Santa María">Santa María</option>
+                <option value="San Agustín">San Agustín</option>
+                <option value="Suaza">Suaza</option>
+                <option value="Tarqui">Tarqui</option>
+                <option value="Tello">Tello</option>
+                <option value="Teruel">Teruel</option>
+                <option value="Tesalia">Tesalia</option>
+                <option value="Timaná">Timaná</option>
+                <option value="Villavieja">Villavieja</option>
+                <option value="Yaguará">Yaguará</option>
+            </select>
+        </div>
     </div>
 
     <table>
         
             <tr class="header-row">
-                <td colspan="6">MATRIZ DE PRIORIZACIÓN DE PROBLEMAS</td>
+                <th colspan="6">MATRIZ DE PRIORIZACIÓN DE PROBLEMAS</th>
             </tr>
             <tr>
                 <th rowspan="4">Criterios</th>
@@ -142,34 +187,25 @@
 
             <!-- PROBLEMA -->
             <tr>
-                <td>Problema 1</td>
+                <td><textarea placeholder="Problema A"></textarea></td>
                 <td class="padding-none">
                     <table>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><select><option value="" disabled selected>Seleccione..</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td>
                         </tr>
                     </table>
                 </td>
                 <td class="padding-none">
                     <table>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><select><option value="" disabled selected>Seleccione..</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td>
                         </tr>
                     </table>
                 </td>
                 <td class="padding-none">
                     <table>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><select><option value="" disabled selected>Seleccione..</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td>
                         </tr>
                     </table>
                 </td>
@@ -179,20 +215,14 @@
                             <td class="padding-none">
                                 <table>
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><select><option value="" disabled selected>Seleccione..</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td>
                                     </tr>
                                 </table>
                             </td>
                             <td class="padding-none">
                                 <table>
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><select><option value="" disabled selected>Seleccione..</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td>
                                     </tr>
                                 </table>
                             </td>

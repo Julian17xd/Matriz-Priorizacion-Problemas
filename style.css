@@ -10,7 +10,7 @@ table {
 }
 th, td {
     border: 1px solid #bebebe;
-    padding: 8px;
+    padding: 4px;
 }
 th {
     background-color: #f2f2f2;
@@ -21,6 +21,7 @@ th {
 td {
     text-align: center;
     width: 25%;
+    font-size: 12px;
 }
 .header-row {
     background-color: #e0e0e0;
@@ -41,10 +42,34 @@ td {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.container-form{
+    text-align: left;
+}
+.select{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 label {
-    font-size: 1.2em;
+    font-size: 1rem;
     color: #333;
+}
+
+.container-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #555;
+}
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #007bff;
+    outline: none;
 }
 select {
     width: 100%;
@@ -55,13 +80,22 @@ select {
     font-size: 1em;
     color: #555;
     background-color: #fff;
-    appearance: none; /* Para ocultar el icono por defecto */
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="#000" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6"></path></svg>');
     background-repeat: no-repeat;
     background-position: right 10px center;
-    background-size: 12px 12px;
+    background-size: 1em;
+    cursor: pointer;
 }
 select:focus {
     border-color: #007bff;
     outline: none;
+}
+textarea {
+    width: 90%;
+    padding: 8px;
+    border: none;
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 50px; /* Altura mínima */
+    max-height: 150px; /* Altura máxima */
 }
