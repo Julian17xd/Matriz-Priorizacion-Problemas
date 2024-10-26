@@ -21,6 +21,8 @@ function crearSelect() {
         select.appendChild(option);
     });
 
+    select.addEventListener('change', calcularPromedio); // Añadir evento de cambio
+
     return select;
 }
 
@@ -73,11 +75,35 @@ function crearFilaProblema(problema) {
     celdaCompleja.appendChild(tablaInterna);
     fila.appendChild(celdaCompleja);
 
-    // Añadir celda vacía
-    const celdaVacia = document.createElement("td");
-    fila.appendChild(celdaVacia);
+    // Añadir celda para el promedio
+    const celdaPromedio = document.createElement("td");
+    celdaPromedio.className = "promedio";
+    fila.appendChild(celdaPromedio);
 
     return fila;
+}
+
+function calcularPromedio() {
+    const filas = document.querySelectorAll("table tr");
+    filas.forEach(fila => {
+        const selects = fila.querySelectorAll("select");
+        if (selects.length > 0) {
+            let sum = 0;
+            let count = 0;
+            selects.forEach(select => {
+                const value = parseInt(select.value);
+                if (!isNaN(value)) {
+                    sum += value;
+                    count++;
+                }
+            });
+            const promedio = (count > 0) ? (sum / count).toFixed(2) : '';
+            const celdaPromedio = fila.querySelector(".promedio");
+            if (celdaPromedio) { // Asegúrate de que la celda de promedio existe
+                celdaPromedio.textContent = promedio;
+            }
+        }
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
