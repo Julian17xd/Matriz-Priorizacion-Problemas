@@ -95,7 +95,25 @@ textarea {
     width: 90%;
     padding: 8px;
     border: none;
-    resize: vertical; /* Permite redimensionar verticalmente */
-    min-height: 50px; /* Altura mínima */
-    max-height: 150px; /* Altura máxima */
+    resize: vertical;
+    min-height: 50px; 
+    max-height: 150px; 
+}
+
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
