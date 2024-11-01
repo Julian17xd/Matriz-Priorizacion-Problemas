@@ -90,17 +90,50 @@ function calcularPromedio() {
         if (selects.length > 0) {
             let sum = 0;
             let count = 0;
-            selects.forEach(select => {
+            let sumIntervention = 0;
+            let interventionCount = 0;
+
+            selects.forEach((select, index) => {
                 const value = parseInt(select.value);
                 if (!isNaN(value)) {
-                    sum += value;
-                    count++;
+                    if (index < 3) {  // Sumar los valores de las columnas 1, 2 y 3
+                        sum += value;
+                        count++;
+                    } else {  // Sumar los valores de las columnas 4 y 5
+                        sumIntervention += value;
+                        interventionCount++;
+                    }
                 }
             });
-            const promedio = (count > 0) ? (sum / count).toFixed(2) : '';
+
+            const promedioIntervention = (interventionCount > 0) ? (sumIntervention / interventionCount) : 0;
+            const total = sum + promedioIntervention;
+            const promedio = (count > 0) ? total : '';
+
+            let mensaje = '';
+            if (total >= 4 && total <= 5.32) {
+                mensaje = 'Nvl 1 Priorización: A ' + promedio;
+            } else if (total >= 5.33 && total <= 6.65) {
+                mensaje = 'Nvl 1 Priorización: B ' + promedio;
+            } else if (total >= 6.66 && total <= 7.99) {
+                mensaje = 'Nvl 1 Priorización: C ' + promedio;
+            } else if (total >= 8 && total <= 9.32) {
+                mensaje = 'Nvl 2 priorización: A ' + promedio;
+            } else if (total >= 9.33 && total <= 10.65) {
+                mensaje = 'Nvl 2 priorización: B ' + promedio;
+            } else if (total >= 10.66 && total <= 11.99) {
+                mensaje = 'Nvl 2 priorización: C ' + promedio;
+            } else if (total >= 12 && total <= 13.33) {
+                mensaje = 'Nvl 3 priorización: A ' + promedio;
+            } else if (total >= 13.34 && total <= 14.67) {
+                mensaje = 'Nvl 3 priorización: B ' + promedio;
+            } else if (total >= 14.68 && total <= 16) {
+                mensaje = 'Nvl 3 priorización: C ' + promedio;
+            }
+
             const celdaPromedio = fila.querySelector(".promedio");
             if (celdaPromedio) { // Asegúrate de que la celda de promedio existe
-                celdaPromedio.textContent = promedio;
+                celdaPromedio.textContent = mensaje;
             }
         }
     });
