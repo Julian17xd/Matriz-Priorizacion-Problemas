@@ -1,5 +1,5 @@
 const problemas = ["Problema A", "Problema B", "Problema C", "Problema D", "Problema E"];
-let currentLetterIndex = 5; // Inicia en 5 porque ya tenemos A-E
+let currentLetterIndex = 5; // Inicia en 5 
 
 const opciones = [
     { value: "", text: "Seleccione..", disabled: true, selected: true },
@@ -28,6 +28,7 @@ function crearSelect() {
 
 function crearFilaProblema(problema) {
     const fila = document.createElement("tr");
+    fila.classList.add('main-row')
 
     // Crear celda de textarea
     const celdaTextarea = document.createElement("td");
@@ -114,39 +115,34 @@ function calcularPromedio() {
                 const total = sum + promedioIntervention;
 
                 let mensaje = '';
-                if (total >= 4 && total <= 5.32) {
+                let color = ''; // Variable para el color de fondo
+                if (total >= 4 && total < 8) {
                     mensaje = 'Nvl 1 Priorización: A ' + total;
-                } else if (total >= 5.33 && total <= 6.65) {
-                    mensaje = 'Nvl 1 Priorización: B ' + total;
-                } else if (total >= 6.66 && total <= 7.99) {
-                    mensaje = 'Nvl 1 Priorización: C ' + total;
-                } else if (total >= 8 && total <= 9.32) {
+                    color = 'green';
+                } else if (total >= 8 && total < 12) {
                     mensaje = 'Nvl 2 priorización: A ' + total;
-                } else if (total >= 9.33 && total <= 10.65) {
-                    mensaje = 'Nvl 2 priorización: B ' + total;
-                } else if (total >= 10.66 && total <= 11.99) {
-                    mensaje = 'Nvl 2 priorización: C ' + total;
-                } else if (total >= 12 && total <= 13.33) {
+                    color = 'orange';
+                } else if (total >= 12 && total <= 16) {
                     mensaje = 'Nvl 3 priorización: A ' + total;
-                } else if (total >= 13.34 && total <= 14.67) {
-                    mensaje = 'Nvl 3 priorización: B ' + total;
-                } else if (total >= 14.68 && total <= 16) {
-                    mensaje = 'Nvl 3 priorización: C ' + total;
+                    color = 'red';
                 }
 
                 const celdaPromedio = fila.querySelector(".promedio");
-                if (celdaPromedio) { // Asegúrate de que la celda de promedio existe
+                if (celdaPromedio) {
                     celdaPromedio.textContent = mensaje;
+                    celdaPromedio.style.backgroundColor = color; // Cambiar el color de fondo solo de la celda
                 }
             } else {
                 const celdaPromedio = fila.querySelector(".promedio");
                 if (celdaPromedio) { // Si no todas las opciones están seleccionadas, limpiar el contenido
                     celdaPromedio.textContent = '';
+                    celdaPromedio.style.backgroundColor = ''; // Restaurar el color de fondo original
                 }
             }
         }
     });
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const tabla = document.querySelector("table");
@@ -167,4 +163,14 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Has alcanzado el límite del alfabeto.");
         }
     });
+    document.getElementById("deleteRowButton").addEventListener("click", function() {
+        const tabla = document.getElementById("problemasTabla");
+        const filas = tabla.querySelectorAll("tr.main-row");
+        if (filas.length > 1) { // Asegurarse de que haya al menos una fila para no eliminar la primera fila
+            const ultimaFila = filas[filas.length - 1];
+            ultimaFila.remove();
+            calcularPromedio(); // Recalcular el promedio después de eliminar la fila
+        }
+    });
+
 });

@@ -117,3 +117,52 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+#deleteRowButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+#deleteRowButton:hover {
+    background-color: #c82333;
+}
+
+
+.bg-green, .nivel1 , .nivel1 > th{
+    background-color: green;
+}
+.bg-orange, .nivel2, .nivel2 > th{
+    background-color: orange;
+}
+.bg-red, .nivel3, .nivel3 > th{
+    background-color: red;
+}
+
+.bg-green, .bg-orange, .bg-red{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.info > table{
+    width: 20%;
+}
+
+.info > button{
+    height: 40px;
+}

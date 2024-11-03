@@ -72,7 +72,7 @@
     <table id="problemasTabla">
         
             <tr class="header-row">
-                <th colspan="6">MATRIZ DE PRIORIZACIÓN DE PROBLEMAS</th>
+                <th colspan="6">MATRIZ DE PRIORIZACIÓN DE PROBLEMAS - SSDH</th>
             </tr>
             <tr>
                 <th rowspan="4">Criterios</th>
@@ -179,10 +179,67 @@
             </tr>
             <tr>
                 <th>Problemas</th>
+                <td class="bg-green" colspan="2">Nivel 1</td>
+                <td class="bg-orange" colspan="1">Nivel 2</td>
+                <td class="bg-red" colspan="2">Nivel 3</td>
             </tr>
     </table>
 
-    <button id="addRowButton">Añadir Problema</button>
+    <div class="info">
+        <button id="deleteRowButton">Eliminar Problema</button>
+        <button id="addRowButton">Añadir Problema</button>
+
+        <table>
+            <tr class="nivel1">
+                <th>Nivel 1</th>
+                <th>Priorización</th>
+            </tr>
+            <tr class="nivel1">
+                <td>4 - 5.32</td>
+                <td>A</td>
+            </tr>
+            <tr class="nivel1">
+                <td>5.33 - 6.65</td>
+                <td>B</td>
+            </tr>
+            <tr class="nivel1">
+                <td>6.66 - 7.99</td>
+                <td>C</td>
+            </tr>
+            <tr class="nivel2">
+                <th>Nivel 2</th>
+                <th>Priorización</th>
+            </tr>
+            <tr class="nivel2">
+                <td>8 - 9.32</td>
+                <td>A</td>
+            </tr>
+            <tr class="nivel2">
+                <td>9.33 - 10.65</td>
+                <td>B</td>
+            </tr>
+            <tr class="nivel2">
+                <td>10.66 - 11.99</td>
+                <td>C</td>
+            </tr>
+            <tr class="nivel3">
+                <th>Nivel 3</th>
+                <th>Priorización</th>
+            </tr>
+            <tr class="nivel3">
+                <td>12 - 13.33</td>
+                <td>A</td>
+            </tr>
+            <tr class="nivel3">
+                <td>13.34 - 14.67</td>
+                <td>B</td>
+            </tr>
+            <tr class="nivel3">
+                <td>14.68 - 16</td>
+                <td>C</td>
+            </tr>
+        </table>
+    </div>
 
     <script src="js/generar_filas_problemas.js"></script>
 </body>
