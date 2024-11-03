@@ -116,15 +116,33 @@ function calcularPromedio() {
 
                 let mensaje = '';
                 let color = ''; // Variable para el color de fondo
-                if (total >= 4 && total < 8) {
+                if (total >= 4 && total <= 5.32) { 
                     mensaje = 'Nvl 1 Priorización: A ' + total;
+                    color = 'green'; 
+                } else if (total >= 5.33 && total <= 6.65) { 
+                    mensaje = 'Nvl 1 Priorización: B ' + total;
+                    color = 'green'; 
+                } else if (total >= 6.66 && total <= 7.99) { 
+                    mensaje = 'Nvl 1 Priorización: C ' + total; 
                     color = 'green';
-                } else if (total >= 8 && total < 12) {
+                } else if (total >= 8 && total <= 9.32) { 
                     mensaje = 'Nvl 2 priorización: A ' + total;
-                    color = 'orange';
-                } else if (total >= 12 && total <= 16) {
+                    color = 'orange'; 
+                } else if (total >= 9.33 && total <= 10.65) { 
+                    mensaje = 'Nvl 2 priorización: B ' + total;
+                    color = 'orange'; 
+                } else if (total >= 10.66 && total <= 11.99) { 
+                    mensaje = 'Nvl 2 priorización: C ' + total;
+                    color = 'orange'; 
+                } else if (total >= 12 && total <= 13.33) { 
                     mensaje = 'Nvl 3 priorización: A ' + total;
-                    color = 'red';
+                    color = 'red'; 
+                } else if (total >= 13.34 && total <= 14.67) { 
+                    mensaje = 'Nvl 3 priorización: B ' + total;
+                    color = 'red'; 
+                } else if (total >= 14.68 && total <= 16) { 
+                    mensaje = 'Nvl 3 priorización: C ' + total;
+                    color = 'red'; 
                 }
 
                 const celdaPromedio = fila.querySelector(".promedio");
