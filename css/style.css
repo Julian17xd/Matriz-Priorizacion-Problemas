@@ -49,9 +49,11 @@ td {
     text-align: left;
 }
 .select{
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: start;
 }
 label {
     font-size: 1rem;
@@ -164,7 +166,7 @@ button:hover {
 .info{
     display: flex;
     justify-content: space-between;
-    margin-top: 4rem;
+    margin: 4rem 0;
 }
 
 .info > table{
@@ -173,4 +175,27 @@ button:hover {
 
 .info > button{
     height: 40px;
+}
+
+footer{
+    background-color: #00B300;
+}
+
+.footer-container{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: white;
+}
+
+.footer-div-img{
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-img{
+    width: 130px;
 }

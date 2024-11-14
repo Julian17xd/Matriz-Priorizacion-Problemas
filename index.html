@@ -1,251 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Matriz de Priorización de Problemas</title>
+    <link rel="stylesheet" href="./css/inicio.css">
+    <title>Inicio</title>
 </head>
 <body>
-
-    <div class="container">
-
-        <div>
-            <form class="container-form">
+    <div class="principal">
+        <header>
+            <img src="img/logo-SSDH.jpg" alt="logo-SSDH">
+        </header>
+    
+        <main>
+            <h1>Selecciona una opción</h1>
+            <div class="main-container">
                 <div>
-                    <label for="nombre">Nombre:</label>
-                    <input class="container-input" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
-                    
+                    <a href="municipio.html">
+                        <img src="img/municipalidad.png" alt="logo-municipio" class="main-img">
+                    </a>
+                    <h2>Municipio</h2>
                 </div>
-                
                 <div>
-                    <label for="fecha">Fecha:</label>
-                    <input class="container-input" type="date" id="fecha" name="fecha">
+                    <a href="programa.html">
+                        <img src="img/programa.png" alt="logo-programa" class="main-img">
+                    </a>
+                    <h2>Programa</h2>
                 </div>
-            </form>
-        </div>
-
-        <div class="select">
-            <label for="municipio">Selecciona un municipio del Departamento del Huila:</label>
-            <select id="municipio" name="municipio">
-                <option value="" disabled selected>Elige una opción</option>
-                <option value="Aipe">Aipe</option>
-                <option value="Algeciras">Algeciras</option>
-                <option value="Altamira">Altamira</option>
-                <option value="Baraya">Baraya</option>
-                <option value="Campoalegre">Campoalegre</option>
-                <option value="Colombia">Colombia</option>
-                <option value="Elías">Elías</option>
-                <option value="El Agrado">El Agrado</option>
-                <option value="Garzón">Garzón</option>
-                <option value="Gigante">Gigante</option>
-                <option value="Guadalupe">Guadalupe</option>
-                <option value="Hobo">Hobo</option>
-                <option value="Íquira">Íquira</option>
-                <option value="Isnos">Isnos</option>
-                <option value="La Argentina">La Argentina</option>
-                <option value="La Plata">La Plata</option>
-                <option value="Nátaga">Nátaga</option>
-                <option value="Neiva">Neiva</option>
-                <option value="Oporapa">Oporapa</option>
-                <option value="Paicol">Paicol</option>
-                <option value="Palermo">Palermo</option>
-                <option value="Palestina">Palestina</option>
-                <option value="Pital">Pital</option>
-                <option value="Pitalito">Pitalito</option>
-                <option value="Rivera">Rivera</option>
-                <option value="Saladoblanco">Saladoblanco</option>
-                <option value="Santa María">Santa María</option>
-                <option value="San Agustín">San Agustín</option>
-                <option value="Suaza">Suaza</option>
-                <option value="Tarqui">Tarqui</option>
-                <option value="Tello">Tello</option>
-                <option value="Teruel">Teruel</option>
-                <option value="Tesalia">Tesalia</option>
-                <option value="Timaná">Timaná</option>
-                <option value="Villavieja">Villavieja</option>
-                <option value="Yaguará">Yaguará</option>
-            </select>
-        </div>
-
-        <div class="container-img">
-            <img class="img-logo" src="img/logo-SSDH.jpg" alt="logo-SSDH">
-        </div>
-
+            </div>
+        </main>
+    
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h3>Hernán Chavarro Barreto</h3>
+                    <h3>hchavarro@usco.edu.co</h3>
+                </div>
+                <div class="footer-div-img">
+                    <img src="img/QR.jpg" alt="QR" class="footer-img">
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <table id="problemasTabla">
-        
-            <tr class="header-row">
-                <th colspan="6">MATRIZ DE PRIORIZACIÓN DE PROBLEMAS - SSDH</th>
-            </tr>
-            <tr>
-                <th rowspan="4">Criterios</th>
-                <th>Magnitud</th>
-                <th>Pertinencia Social e Intercultural</th>
-                <th>Trascendencia</th>
-                <th class="padding-none">
-                    <p>CAPACIDAD DE INTERVENCIÓN</p>
-                    <table class="inner-table">
-                        <tr>
-                            <td>FACTIBILIDAD</td>
-                            <td>VIABILIDAD</td>
-                        </tr>
-                    </table>
-                </th>
-                <th rowspan="4">Nivel de Priorización</th>
-            </tr>
-        
-            <tr>
-                <td>¿Cuántas personas son afectados por el problema?</td>
-                <td>¿Cuál es el grado de adecuación o de compromiso que tiene la política respecto al contexto social en el cual se desarrolla y respecto del marco cultural de la población en la que se da?</td>
-                <td>¿Qué tan duradero o grave es el problema por sus efectos a través del tiempo?</td>
-                <td class="padding-none">
-                    <table class="inner-table">
-                        <tr>
-                            <td>¿Es posible la intervención?</td>
-                            <td>¿Las circunstancias permiten realizar la intervención?</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Calificación</td>
-                <td>Calificación</td>
-                <td>Calificación</td>
-                <td class="padding-none">
-                    <table class="inner-table">
-                        <tr>
-                            <td>Calificación</td>
-                            <td>Calificación</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="padding-none">
-                    <table>
-                        <tr>
-                            <td>Baja : 1</td>
-                            <td>Medio: 2</td>
-                            <td>Alto: 3</td>
-                            <td>Muy Alto: 4</td>
-                        </tr>
-                    </table>
-                </td>
-                <td class="padding-none">
-                    <table>
-                        <tr>
-                            <td>Baja : 1</td>
-                            <td>Medio: 2</td>
-                            <td>Alto: 3</td>
-                            <td>Muy Alto: 4</td>
-                        </tr>
-                    </table>
-                </td>
-                <td class="padding-none">
-                    <table>
-                        <tr>
-                            <td>Baja : 1</td>
-                            <td>Medio: 2</td>
-                            <td>Alto: 3</td>
-                            <td>Muy Alto: 4</td>
-                        </tr>
-                    </table>
-                </td>
-                <td class="padding-none">
-                    <table class="inner-table">
-                        <tr>
-                            <td class="padding-none">
-                                <table>
-                                    <tr>
-                                        <td>Baja : 1</td>
-                                        <td>Medio: 2</td>
-                                        <td>Alto: 3</td>
-                                        <td>Muy Alto: 4</td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td class="padding-none">
-                                <table>
-                                    <tr>
-                                        <td>Baja : 1</td>
-                                        <td>Medio: 2</td>
-                                        <td>Alto: 3</td>
-                                        <td>Muy Alto: 4</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <th>Problemas</th>
-                <td class="bg-green" colspan="2">Nivel 1</td>
-                <td class="bg-orange" colspan="1">Nivel 2</td>
-                <td class="bg-red" colspan="2">Nivel 3</td>
-            </tr>
-    </table>
-
-    <div class="info">
-        <button id="deleteRowButton">Eliminar Problema</button>
-        <button id="addRowButton">Añadir Problema</button>
-
-        <table>
-            <tr class="nivel1">
-                <th>Nivel 1</th>
-                <th>Priorización</th>
-            </tr>
-            <tr class="nivel1">
-                <td>4 - 5.32</td>
-                <td>A</td>
-            </tr>
-            <tr class="nivel1">
-                <td>5.33 - 6.65</td>
-                <td>B</td>
-            </tr>
-            <tr class="nivel1">
-                <td>6.66 - 7.99</td>
-                <td>C</td>
-            </tr>
-            <tr class="nivel2">
-                <th>Nivel 2</th>
-                <th>Priorización</th>
-            </tr>
-            <tr class="nivel2">
-                <td>8 - 9.32</td>
-                <td>A</td>
-            </tr>
-            <tr class="nivel2">
-                <td>9.33 - 10.65</td>
-                <td>B</td>
-            </tr>
-            <tr class="nivel2">
-                <td>10.66 - 11.99</td>
-                <td>C</td>
-            </tr>
-            <tr class="nivel3">
-                <th>Nivel 3</th>
-                <th>Priorización</th>
-            </tr>
-            <tr class="nivel3">
-                <td>12 - 13.33</td>
-                <td>A</td>
-            </tr>
-            <tr class="nivel3">
-                <td>13.34 - 14.67</td>
-                <td>B</td>
-            </tr>
-            <tr class="nivel3">
-                <td>14.68 - 16</td>
-                <td>C</td>
-            </tr>
-        </table>
-    </div>
-
-    <script src="js/generar_filas_problemas.js"></script>
 </body>
 </html>
