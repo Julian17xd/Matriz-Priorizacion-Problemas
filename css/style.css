@@ -52,7 +52,6 @@ td {
     min-width: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: start;
 }
 label {
@@ -76,7 +75,6 @@ input[type="text"]:focus, input[type="date"]:focus {
 select {
     width: 100%;
     padding: 10px;
-    margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
