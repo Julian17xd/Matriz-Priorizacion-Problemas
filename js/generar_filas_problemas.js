@@ -127,7 +127,7 @@ function calcularPromedio() {
                     color = 'green';
                 } else if (total >= 8 && total <= 9.32) { 
                     mensaje = 'Nvl 2 priorización: A ' + total;
-                    color = 'orange'; 
+                    color = 'green'; 
                 } else if (total >= 9.33 && total <= 10.65) { 
                     mensaje = 'Nvl 2 priorización: B ' + total;
                     color = 'orange'; 
@@ -136,7 +136,7 @@ function calcularPromedio() {
                     color = 'orange'; 
                 } else if (total >= 12 && total <= 13.33) { 
                     mensaje = 'Nvl 3 priorización: A ' + total;
-                    color = 'red'; 
+                    color = 'orange'; 
                 } else if (total >= 13.34 && total <= 14.67) { 
                     mensaje = 'Nvl 3 priorización: B ' + total;
                     color = 'red'; 
@@ -190,5 +190,15 @@ document.addEventListener("DOMContentLoaded", function() {
             calcularPromedio(); // Recalcular el promedio después de eliminar la fila
         }
     });
+
+// Codigo para descargar el docuemnto .docx
+document.getElementById("downloadButton").addEventListener("click", function() {
+    fetch('Documentos/PLANTILLA.docx')
+        .then(response => response.blob())
+        .then(blob => {
+            saveAs(blob, 'PLANTILLA.doc');
+        })
+        .catch(error => console.error('Error al descargar el archivo:', error));
+});
 
 });

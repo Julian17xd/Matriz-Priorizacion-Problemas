@@ -128,7 +128,7 @@ textarea {
 
 .info{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     margin: 4rem 0;
     row-gap: 4rem;
@@ -143,8 +143,7 @@ textarea {
     height: 40px;
 }
 
-#addRowButton {
-    background-color: #007bff;
+.btn{
     color: white;
     border: none;
     padding: 10px 20px;
@@ -156,34 +155,41 @@ textarea {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+#addRowButton {
+    background-color: #007bff;
+    grid-column: 2;
+}
+
+#addRowButton:hover {
     background-color: #0056b3;
 }
 
 #deleteRowButton {
     grid-column: 1;
     background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    margin: 10px auto;
-    display: block;
-    transition: background-color 0.3s ease;
 }
 
 #deleteRowButton:hover {
     background-color: #c82333;
 }
 
-#addRowButton{
-    grid-column: 2;
+#downloadButton{
+    color: black;
+    margin: 0 auto;
+    background-color: #28a745;
+    grid-column: 3;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#downloadButton:hover { 
+    background-color: #218838; 
 }
 
 .info__table{
-    grid-column: span 2;
+    grid-column: span 3;
 }
 
 .info__table--span{

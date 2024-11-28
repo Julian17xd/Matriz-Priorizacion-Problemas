@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Programa</title>
 </head>
@@ -196,13 +197,17 @@
     </table>
 
     <div class="info">
-        <button id="deleteRowButton">Eliminar Problema</button>
-        <button id="addRowButton">Añadir Problema</button>
+        <button id="deleteRowButton" class="btn">Eliminar Problema</button>
+        <button id="addRowButton" class="btn">Añadir Problema</button>
+        <button id="downloadButton" class="btn">
+            <img src="img/word.png" alt="">
+            Descargar Plantilla
+        </button>
 
         <table class="info__table">
             <tr>
                 <th colspan="2">RESULTADOS DE LAS PRIORIZACIONES</th>
-                <th>INTERVENCIONES SEGÚN VALOR EN SALUD</th>
+                <th>Carga de la enfermedad</th>
             </tr>
             <tr class="nivel1">
                 <th>Nivel 1</th>
@@ -229,7 +234,7 @@
                 <td>C</td>
                 <td class="info__table-td">Impulsar políticas públicas saludables: La intersectorialidad encauzada a la creación de ambientes y formas de vida saludables. </td>
             </tr>
-            <tr class="nivel2">
+            <tr class="nivel1">
                 <th>Nivel 2</th>
                 <th>Priorización</th>
                 <td class="info__table-td">
@@ -237,28 +242,28 @@
                     <br>Es la toma de decisiones para evitar la aparición de la enfermedad, al identificar los factores de riesgo para detener el avance de la enfermedad y atenuar sus consecuencias una vez establecida.
                 </td>
             </tr>
-            <tr class="nivel2">
+            <tr class="nivel1">
                 <td>8 - 9.32</td>
                 <td>A</td>
                 <td class="info__table-td">
-                    Nivel 1: Prevención de la aparición de la enfermedad. Fase Prepatogénica. PAI, Fluorización, yodo.
+                    Prevención primaria: Prevención de la aparición de la enfermedad. Fase Prepatogénica. PAI, Fluorización, yodo.
                 </td>
             </tr>
             <tr class="nivel2">
                 <td>9.33 - 10.65</td>
                 <td>B</td>
                 <td class="info__table-td">
-                    Nivel 2: Detener el avance de la enfermedad. Fase Patogenia, servicios de salud: Diagnóstico precoz, Pruebas diagnósticas. Disminuir tasas de mortalidad.
+                    Prevención secundaria: Detener el avance de la enfermedad. Fase Patogenia, servicios de salud: Diagnóstico precoz, Pruebas diagnósticas. Disminuir tasas de mortalidad.
                 </td>
             </tr>
             <tr class="nivel2">
                 <td>10.66 - 11.99</td>
                 <td>C</td>
                 <td class="info__table-td">
-                    Nivel 3: Atenuar sus consecuencias una vez establecidas. Fase Crónica: Resultado: mediante secuelas, discapacidad o muerte.
+                    Prevención terciaria: Atenuar sus consecuencias una vez establecidas. Fase Crónica: Resultado: mediante secuelas, discapacidad o muerte.
                 </td>
             </tr>
-            <tr class="nivel3">
+            <tr class="nivel2">
                 <th>Nivel 3</th>
                 <th>Priorización</th>
                 <td class="info__table-td">
@@ -266,7 +271,7 @@
                     <br> Es la forma de organizar los diferentes recursos para satisfacer los problemas de salud de la población.
                 </td>
             </tr>
-            <tr class="nivel3">
+            <tr class="nivel2">
                 <td>12 - 13.33</td>
                 <td>A</td>
                 <td class="info__table-td">
@@ -289,9 +294,15 @@
                 <td>C</td>
                 <td class="info__table-td">
                     3 nivel de atención:
-                    Atención de patologías complejas, con procedimientos especializados y de alta tecnología.
-                    Solución del 5% de los problemas. Concepto de contrarreferencia a menor complejidad.
+                    Atención de patologías complejas, con procedimientos especializados y de alta tecnología,
+                    solución del 5% de los problemas. Concepto de contrarreferencia a menor complejidad.
                 </td>
+            </tr>
+            <tr>
+                <th colspan="2">Indicadores en salud</th>
+                <th style="text-align: left;">AVISA: Años de vida saludables perdidos.<br>
+                    AVS: Años de vida saludables libres de discapacidad
+                    </th>
             </tr>
         </table>
     </div>
